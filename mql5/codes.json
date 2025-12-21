@@ -1,0 +1,60 @@
+
+{
+	"meta": {
+		"description": "Mapping of published code listings and related media for MQL5 products",
+		"maintainer": "replace-with-your-name-or-contact",
+		"generated_at": "2025-12-22T00:00:00Z",
+		"notes": "Use `publications` for links to codebase posts/listings and `videos` for YouTube references. Keys for products should match titles in products.json when possible."
+	},
+	"publications": [
+		{
+			"title": "Popular MACD Strategy from Viral YouTube Video (3.5M+ Views)",
+			"url": "https://www.mql5.com/en/code/61998",
+			"description": "This Expert Advisor is based on a MACD crossover strategy with trend filtering and support/resistance confirmation. The logic is built according to the most common interpretation of such strategies, using standard indicators. The code is full of comments explaining every line of code step by step.",
+            "video": "https://youtu.be/GbSkwE_l9fg?si=RVg8vpb2nQTQiMCi",
+            "platform": "MT5"
+        },        
+        {
+            "title": "Viral MACD Strategy (3.5M+ Views) — Recreated and Automated",
+			"url": "https://www.mql5.com/en/code/62000",
+			"description": "This Expert Advisor is based on a MACD crossover strategy with trend filtering and support/resistance confirmation. The logic is built according to the most common interpretation of such strategies, using standard indicators. The code is full of comments explaining every line of code step by step.",
+            "video": "https://youtu.be/GbSkwE_l9fg?si=RVg8vpb2nQTQiMCi",
+            "platform": "MT4"
+        },
+        {
+            "title": "Moving Average Crossover with and without Martingale functionality",
+			"url": "https://www.mql5.com/en/code/50198",
+			"description": "This Expert Advisor is a simple Moving Average Crossover strategy with optional Martingale functionality. It uses two moving averages to generate buy and sell signals. The code is well-commented to help users understand the logic behind the strategy.",
+            "video": "https://youtu.be/X0lsg6b4Tng?si=EaYVOiewVF4ra1id",
+            "platform": "MT5"
+        },
+        {
+            "title": "Grid and Martin Gale include file",
+			"url": "https://www.mql5.com/en/code/45598",
+			"description": "This include file enables Programmers to create Martin Gale and Grid Trading strategies with ease.",
+            "video": "https://youtu.be/43weFsECzQA",
+            "platform": "MT4"
+        },
+        {
+            "title": "Grid and Martin Gale include file",
+			"url": "https://www.mql5.com/en/code/44807",
+			"description": "This include file enables Programmers to create Martin Gale and Grid Trading strategies with ease.",
+            "video": "https://youtu.be/43weFsECzQA",
+            "platform": "MT5"
+        },
+        {
+            "title": "Rainbow indicator for mt5",
+			"url": "https://www.mql5.com/en/code/47048",
+			"description": "This is an indicator with a rainbow-like display, both for trend or pullback prediction.",
+            "video": "https://youtu.be/8GPsWYxcaAw",
+            "platform": "MT5"
+        },
+        {
+            "title": "Rainbow indicator for mt4",
+			"url": "https://www.mql5.com/en/code/47049",
+			"description": "This is an indicator with a rainbow-like display, both for trend or pullback prediction.",
+            "video": "https://youtu.be/8GPsWYxcaAw",
+            "platform": "MT4"
+        }
+    ]
+}

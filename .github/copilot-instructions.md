@@ -1,56 +1,57 @@
 **Project Overview**
 
-- **Type:** Minimal FastAPI service (single-file) - see `app.py`.
-- **Entrypoint:** `app.py` exposes an ASGI `FastAPI` app as `app` and is launched with Uvicorn (`uvicorn.run("app:app", ...)`).
-- **Endpoints:** `/` (root) and `/health` — use these for quick local smoke tests.
+- **Type:** FastAPI web scraper service (single-file) - see [app.py](app.py).
+- **Purpose:** Scrapes MQL5 marketplace (`https://www.mql5.com/en/users/mullerp04/seller`) for MT4/MT5 trading product listings.
+- **Entrypoint:** `app.py` exposes an ASGI `FastAPI` app as `app`, launched with Uvicorn.
 
-**What to change and why**
+**API Endpoints**
 
-- **Small, focused edits:** This repository is a tiny HTTP service. Keep changes minimal and localized to `app.py` unless adding integration/tests or packaging.
-- **Preserve run semantics:** The file currently calls `uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)` when executed as `__main__`. If you change host/port or reload behavior, ensure local dev workflow is preserved.
+- `GET /` — Health check root; returns `{"status": "success", "message": "FastAPI is running"}`.
+- `GET /health` — Health check; returns `{"status": "ok"}`.
+- `GET /mql5/products/MT4` — Scrapes MQL5 seller page and filters MT4 products (title contains "MT4").
+- `GET /mql5/products/MT5` — Scrapes MQL5 seller page and filters MT5 products (title contains "MT5").
 
-**Local developer workflows (explicit commands)**
+**Scraping Pattern & Data Flow**
 
-- **Create & activate venv (PowerShell):**
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate
-```
-
-- **Install runtime deps (explicit from imports):**
-
-```powershell
-pip install fastapi uvicorn
-```
-
-- **Run dev server (equivalent to current `if __name__ == '__main__'`):**
-
-```powershell
-uvicorn app:app --reload --host 127.0.0.1 --port 8000
-```
-
-- **Quick smoke test:** Visit `http://127.0.0.1:8000/` and `http://127.0.0.1:8000/health`.
+1. Both `/mql5/products/*` endpoints use async HTTP client (`httpx.AsyncClient`) to fetch MQL5 page.
+2. Parse HTML with BeautifulSoup; select `<span class="product-card__title-wrapper">` elements.
+3. Filter by string matching `.text.strip().__contains__("MT4")` or `.text.strip().__contains__("MT5")`.
+4. Return filtered list as `{"products": [...]}`; **note:** no deduplication or sorting applied.
 
 **Project-specific conventions & patterns**
 
-- **Single-file service:** All behavior lives in `app.py`. New modules are allowed but prefer small, orthogonal modules rather than broad refactors.
-- **ASGI app object name:** The app is exported as `app` (i.e., `app:app` for Uvicorn). Don't rename the exported symbol unless updating run commands/tests accordingly.
-- **Dev reload enabled:** `reload=True`/`--reload` is used for developer productivity; CI or production runs should disable reload.
+- **Single-file service:** All endpoints in [app.py](app.py); new logic should integrate here unless creating orthogonal modules (e.g., test files).
+- **Scraping helpers:** Use `httpx.AsyncClient` for HTTP; `BeautifulSoup` for HTML parsing. External URL is hardcoded—consider parametrizing if endpoints expand.
+- **Function naming:** Two routes (`/MT4` and `/MT5`) currently define identically-named functions `free_products()`. Rename to `mt4_products()` / `mt5_products()` if adding more endpoints.
+- **ASGI export:** App exported as `app`; Uvicorn command is `uvicorn app:app ...`.
+
+**Local developer workflows (PowerShell)**
+
+```powershell
+# Create & activate venv
+python -m venv .venv
+.\.venv\Scripts\Activate
+
+# Install runtime deps (explicit from imports)
+pip install fastapi uvicorn httpx beautifulsoup4
+
+# Run dev server with reload
+uvicorn app:app --reload --host 127.0.0.1 --port 8000
+
+# Quick smoke tests
+curl http://127.0.0.1:8000/
+curl http://127.0.0.1:8000/health
+curl http://127.0.0.1:8000/mql5/products/MT4
+```
 
 **Dependencies & integration points**
 
-- **Explicit imports:** From the code we require `fastapi` and `uvicorn`. There are no other discovered external integrations (databases, queues, cloud SDKs) in the repository.
-- **Packaging/build:** No `requirements.txt`, `pyproject.toml`, or CI config detected — add them if you introduce packaging or CI steps.
+- **Runtime:** `fastapi`, `uvicorn`, `httpx`, `beautifulsoup4`.
+- **External:** Hardcoded scrape target `https://www.mql5.com/en/users/mullerp04/seller`—subject to site structure changes.
+- **Note:** No `requirements.txt` or `pyproject.toml` currently; add if packaging or CI is needed.
 
-**When editing, give these examples in PR descriptions**
+**When editing**
 
-- **Change scope:** "Small change — add X endpoint to `app.py` and update README with example curl".
-- **Run instructions:** Include the PowerShell commands above to reproduce locally.
-
-**Files to inspect for context**
-
-- `app.py` — runtime & endpoints (source of truth for app behavior)
-- `.venv/` — ignore; environment artifacts may exist locally
-
-If anything in this summary looks incorrect for your environment (missing packaging, tests, or infra integrations), tell me which files or services to inspect and I will update this guidance.  
+- Keep endpoint logic in [app.py](app.py); extract scraping to separate module only if complexity grows.
+- Test scraping locally before deployment; MQL5 HTML structure changes will break selectors.
+- Avoid renaming `app` symbol; update Uvicorn commands/docs if changed.  
