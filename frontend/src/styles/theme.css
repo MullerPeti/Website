@@ -1,0 +1,77 @@
+/* Theme Variables */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #3b82f6;
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #1e40af;
+
+  /* Secondary Colors */
+  --color-secondary: #8b5cf6;
+  --color-secondary-light: #a78bfa;
+  --color-secondary-dark: #6d28d9;
+
+  /* Background Colors */
+  --color-background: #ffffff;
+  --color-background-secondary: #f3f4f6;
+  --color-background-tertiary: #e5e7eb;
+
+  /* Text Colors */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+
+  /* Button Colors */
+  --color-button-primary: #3b82f6;
+  --color-button-primary-hover: #2563eb;
+  --color-button-secondary: #e5e7eb;
+  --color-button-secondary-hover: #d1d5db;
+
+  /* Border Colors */
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+}
+
+.dark {
+  /* Primary Colors */
+  --color-primary: #60a5fa;
+  --color-primary-light: #93c5fd;
+  --color-primary-dark: #1e40af;
+
+  /* Secondary Colors */
+  --color-secondary: #a78bfa;
+  --color-secondary-light: #c4b5fd;
+  --color-secondary-dark: #5b21b6;
+
+  /* Background Colors */
+  --color-background: #111827;
+  --color-background-secondary: #1f2937;
+  --color-background-tertiary: #374151;
+
+  /* Text Colors */
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #d1d5db;
+  --color-text-tertiary: #9ca3af;
+
+  /* Button Colors */
+  --color-button-primary: #3b82f6;
+  --color-button-primary-hover: #1d4ed8;
+  --color-button-secondary: #374151;
+  --color-button-secondary-hover: #4b5563;
+
+  /* Border Colors */
+  --color-border: #374151;
+  --color-border-light: #1f2937;
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+}

@@ -1,0 +1,50 @@
+@import "./styles/theme.css";
+
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Fallback minimal styles for markdown rendered into `.prose` containers.
+   This ensures headings, lists and paragraphs look reasonable even if
+   the Tailwind Typography plugin isn't available or built. */
+.prose {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+.prose h1, .prose h2, .prose h3 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.prose h1 { font-size: 1.875rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+.prose p { margin-bottom: 0.75rem; }
+.prose ul, .prose ol { margin: 0.5rem 0 0.75rem 1.25rem; }
+.prose li { margin-bottom: 0.35rem; }
+.prose a { color: #60a5fa; text-decoration: underline; }
+
+/* Ensure normal bullet markers inside markdown `.prose` containers. */
+.prose ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1.25rem;
+  padding-left: 0.25rem;
+}
+.prose ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 1.25rem;
+  padding-left: 0.25rem;
+}
+.prose li {
+  margin-bottom: 0.35rem;
+}
+.prose li::marker {
+  color: var(--color-text-secondary);
+  font-size: 0.95em;
+}

@@ -1,0 +1,325 @@
+[
+  {
+    "slug": "ic-trading",
+    "name": "IC Trading",
+    "url": "https://www.ictrading.com/?camp=88790",
+    "trustpilot_link": "https://www.trustpilot.com/review/ictrading.com",
+    "short_description": "IC Trading — services for forex and CFDs",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "cTrader",
+      "TradingView"
+    ],
+    "regulation": [
+      "ASIC (Australia)",
+      "CySEC (Cyprus)",
+      "FSA (Seychelles)",
+      "CMA (Kenya)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "1M+",
+    "trading_cost": "low",
+    "description_file": "brokers/ic-trading.md",
+    "trustpilot_review": 4.8
+  },
+  {
+    "slug": "exness",
+    "name": "Exness",
+    "url": "https://www.exness.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/exness.com",
+    "short_description": "Exness — high-volume forex and CFD broker",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "FCA (UK)",
+      "CySEC (Cyprus)",
+      "FSCA (South Africa)",
+      "FSA (Seychelles)"
+    ],
+    "eu_allowed": false,
+    "us_allowed": false,
+    "userbase": "700k+",
+    "trading_cost": "low",
+    "description_file": "brokers/exness.md",
+    "trustpilot_review": 4.8
+  },
+  {
+    "slug": "eightcap",
+    "name": "Eightcap",
+    "url": "https://www.eightcap.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/eightcap.com",
+    "short_description": "Eightcap — MT4/MT5 broker with TradingView integration",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "TradingView",
+      "Web"
+    ],
+    "regulation": [
+      "ASIC (Australia)",
+      "SCB (Bahamas)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "100k+",
+    "trading_cost": "low",
+    "description_file": "brokers/eightcap.md",
+    "trustpilot_review": 4.1
+  },
+  {
+    "slug": "pepperstone",
+    "name": "Pepperstone",
+    "url": "https://pepperstone.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/pepperstone.com",
+    "short_description": "Pepperstone — low-latency forex and CFD broker",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "cTrader",
+      "TradingView"
+    ],
+    "regulation": [
+      "ASIC (Australia)",
+      "FCA (UK)",
+      "CySEC (Cyprus)",
+      "DFSA (Dubai)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "750k+",
+    "trading_cost": "low",
+    "description_file": "brokers/pepperstone.md",
+    "trustpilot_review": 4.3
+  },
+  {
+    "slug": "oanda",
+    "name": "OANDA",
+    "url": "https://www.oanda.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/oanda.com",
+    "short_description": "OANDA — regulated forex broker with strong pricing transparency",
+    "supported_platforms": [
+      "MT4",
+      "TradingView",
+      "Web"
+    ],
+    "regulation": [
+      "CFTC/NFA (USA)",
+      "FCA (UK)",
+      "ASIC (Australia)",
+      "MAS (Singapore)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": true,
+    "userbase": "50k+",
+    "trading_cost": "medium",
+    "description_file": "brokers/oanda.md",
+    "trustpilot_review": 3.9
+  },
+  {
+    "slug": "xm-group",
+    "name": "XM Group",
+    "url": "https://www.xm.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/xm.com",
+    "short_description": "XM — global retail forex and CFD broker",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "CySEC (Cyprus)",
+      "ASIC (Australia)",
+      "IFSC (Belize)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "15M+",
+    "trading_cost": "medium",
+    "description_file": "brokers/xm.md",
+    "trustpilot_review": 3.3
+  },
+  {
+    "slug": "xtb",
+    "name": "XTB",
+    "url": "https://www.xtb.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/xtb.com",
+    "short_description": "XTB — multi-asset broker with proprietary platform",
+    "supported_platforms": [
+      "xStation",
+      "Web",
+      "Mobile"
+    ],
+    "regulation": [
+      "KNF (Poland)",
+      "FCA (UK)",
+      "CySEC (Cyprus)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "2M+",
+    "trading_cost": "medium",
+    "description_file": "brokers/xtb.md"
+  },
+  {
+    "slug": "roboforex",
+    "name": "RoboForex",
+    "url": "https://roboforex.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/roboforex.com",
+    "short_description": "RoboForex — offshore broker offering MT4 and MT5",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "IFSC (Belize)"
+    ],
+    "eu_allowed": false,
+    "us_allowed": false,
+    "userbase": "1M+",
+    "trading_cost": "medium",
+    "description_file": "brokers/roboforex.md",
+    "trustpilot_review": 2.5
+  },
+  {
+    "slug": "tickmill",
+    "name": "Tickmill",
+    "url": "https://www.tickmill.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/tickmill.com",
+    "short_description": "Tickmill — low-latency MT4/MT5 broker popular with scalpers and EAs",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "FCA (UK)",
+      "CySEC (Cyprus)",
+      "FSA (Seychelles)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "500k+",
+    "trading_cost": "low",
+    "description_file": "brokers/tickmill.md",
+    "trustpilot_review": 3.5
+  },
+  {
+    "slug": "fp-markets",
+    "name": "FP Markets",
+    "url": "https://www.fpmarkets.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/fpmarkets.com",
+    "short_description": "FP Markets — MT4/MT5 broker with strong execution for algorithmic trading",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "cTrader",
+      "Web"
+    ],
+    "regulation": [
+      "ASIC (Australia)",
+      "CySEC (Cyprus)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "300k+",
+    "trading_cost": "low",
+    "description_file": "brokers/fp-markets.md",
+    "trustpilot_review": 4.8
+  },
+  {
+    "slug": "admirals",
+    "name": "Admirals",
+    "url": "https://admiralmarkets.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/admiralmarkets.com",
+    "short_description": "Admirals — EU-regulated MT4/MT5 broker with broad CFD offering",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "FCA (UK)",
+      "CySEC (Cyprus)",
+      "EFSA (Estonia)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "400k+",
+    "trading_cost": "medium",
+    "description_file": "brokers/admirals.md",
+    "trustpilot_review": 4.1
+  },
+  {
+    "slug": "vantage",
+    "name": "Vantage",
+    "url": "https://www.vantagemarkets.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/vantagemarkets.com",
+    "short_description": "Vantage — MT4/MT5 broker focused on CFDs and leveraged trading",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "ASIC (Australia)",
+      "CIMA (Cayman Islands)"
+    ],
+    "eu_allowed": false,
+    "us_allowed": false,
+    "userbase": "1M+",
+    "trading_cost": "low",
+    "description_file": "brokers/vantage.md",
+    "trustpilot_review": 4.4
+  },
+  {
+    "slug": "avatrade",
+    "name": "AvaTrade",
+    "url": "https://www.avatrade.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/avatrade.com",
+    "short_description": "AvaTrade — globally regulated broker supporting MT4 and MT5",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "Central Bank of Ireland",
+      "ASIC (Australia)",
+      "FSA (Japan)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "400k+",
+    "trading_cost": "high",
+    "description_file": "brokers/avatrade.md",
+    "trustpilot_review": 4.8
+  },
+  {
+    "slug": "fbs",
+    "name": "FBS",
+    "url": "https://fbs.com/",
+    "trustpilot_link": "https://www.trustpilot.com/review/fbs.com",
+    "short_description": "FBS — high-volume MT4/MT5 broker with strong emerging-market presence",
+    "supported_platforms": [
+      "MT4",
+      "MT5",
+      "Web"
+    ],
+    "regulation": [
+      "CySEC (Cyprus)",
+      "IFSC (Belize)"
+    ],
+    "eu_allowed": true,
+    "us_allowed": false,
+    "userbase": "20M+",
+    "trading_cost": "medium",
+    "description_file": "brokers/fbs.md",
+    "trustpilot_review": 4.3
+  }
+]

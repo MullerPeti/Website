@@ -1,0 +1,19 @@
+{
+  "HUF": {
+    "iban": "HU32 1260 0016 1229 0499 1659 7426",
+    "accountNumber": "12600016-12290499-16597426",
+    "beneficiaryName": "Müller Péter",
+    "swift": "TRWIBEBBXXX"
+  },
+  "EUR": {
+    "iban": "BE49 9672 6824 4671",
+    "beneficiaryName": "Müller Péter",
+    "swift": "TRWIBEB1XXX"
+  },
+  "USD": {
+    "accountNumber": "218376706161",
+    "routingNumber": "101019628",
+    "beneficiaryName": "Müller Péter",
+    "swift": "TRWIUS35XXX"
+  }
+}
